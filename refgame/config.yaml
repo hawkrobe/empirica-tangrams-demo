@@ -1,40 +1,4 @@
 treatments:
-  - name: team_redA
-    factorIds:
-      - 9mWDEEbPMz8J8oWxh
-      - dwfYRz6EK4FE9iNcR
-      - LYqRqNsuy3tZGcu7x
-      - zAoBH7r4FvddSqPJc
-      - 5G2PioQghwMMQaiDA
-      - PhWBYRyqGv7hpZbKm
-    archivedAt: 2022-08-08T16:02:05.304Z
-  - name: team_redB
-    factorIds:
-      - 9mWDEEbPMz8J8oWxh
-      - dwfYRz6EK4FE9iNcR
-      - LYqRqNsuy3tZGcu7x
-      - zAoBH7r4FvddSqPJc
-      - T3s4h67DrihbRNpQS
-      - PhWBYRyqGv7hpZbKm
-    archivedAt: 2022-08-08T16:02:05.618Z
-  - name: team_blueA
-    factorIds:
-      - 9mWDEEbPMz8J8oWxh
-      - dwfYRz6EK4FE9iNcR
-      - QEbiEZHHkAaEDEo3q
-      - zAoBH7r4FvddSqPJc
-      - 5G2PioQghwMMQaiDA
-      - PhWBYRyqGv7hpZbKm
-    archivedAt: 2022-08-08T16:02:05.952Z
-  - name: team_blueB
-    factorIds:
-      - 9mWDEEbPMz8J8oWxh
-      - dwfYRz6EK4FE9iNcR
-      - QEbiEZHHkAaEDEo3q
-      - zAoBH7r4FvddSqPJc
-      - T3s4h67DrihbRNpQS
-      - PhWBYRyqGv7hpZbKm
-    archivedAt: 2022-08-08T16:02:06.348Z
   - name: demo
     factorIds:
       - LCPL67GcDLnC7kpX4
@@ -82,11 +46,6 @@ factors:
     name: duo
     value: 2
     factorTypeId: Foqhn4Y7BGbeJWWNH
-  - _id: 9mWDEEbPMz8J8oWxh
-    name: quad
-    value: 4
-    factorTypeId: Foqhn4Y7BGbeJWWNH
-    archivedAt: 2022-08-08T16:01:45.811Z
   - _id: dwfYRz6EK4FE9iNcR
     name: four
     value: '4'
@@ -99,21 +58,6 @@ factors:
     name: blue
     value: blue
     factorTypeId: yZ9EAzrPfAEKk96kr
-  - _id: H6mfXThg4jQ2annbb
-    name: minute
-    value: '60'
-    factorTypeId: kJddTH8X4Y6Df7SPA
-    archivedAt: 2021-01-20T09:52:09.889Z
-  - _id: sLBbCyDZv74ZsrtYE
-    name: solo
-    value: 1
-    factorTypeId: Foqhn4Y7BGbeJWWNH
-    archivedAt: 2021-01-20T10:14:45.046Z
-  - _id: GSmgoGszjTjH6mWNu
-    name: targetSet
-    value: setA
-    factorTypeId: kJddTH8X4Y6Df7SPA
-    archivedAt: 2021-01-18T21:25:42.882Z
   - _id: 5G2PioQghwMMQaiDA
     name: setA
     value: setA
