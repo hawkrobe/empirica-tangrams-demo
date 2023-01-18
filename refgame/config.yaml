@@ -1,0 +1,145 @@
+treatments:
+  - name: team_redA
+    factorIds:
+      - 9mWDEEbPMz8J8oWxh
+      - dwfYRz6EK4FE9iNcR
+      - LYqRqNsuy3tZGcu7x
+      - zAoBH7r4FvddSqPJc
+      - 5G2PioQghwMMQaiDA
+      - PhWBYRyqGv7hpZbKm
+    archivedAt: 2022-08-08T16:02:05.304Z
+  - name: team_redB
+    factorIds:
+      - 9mWDEEbPMz8J8oWxh
+      - dwfYRz6EK4FE9iNcR
+      - LYqRqNsuy3tZGcu7x
+      - zAoBH7r4FvddSqPJc
+      - T3s4h67DrihbRNpQS
+      - PhWBYRyqGv7hpZbKm
+    archivedAt: 2022-08-08T16:02:05.618Z
+  - name: team_blueA
+    factorIds:
+      - 9mWDEEbPMz8J8oWxh
+      - dwfYRz6EK4FE9iNcR
+      - QEbiEZHHkAaEDEo3q
+      - zAoBH7r4FvddSqPJc
+      - 5G2PioQghwMMQaiDA
+      - PhWBYRyqGv7hpZbKm
+    archivedAt: 2022-08-08T16:02:05.952Z
+  - name: team_blueB
+    factorIds:
+      - 9mWDEEbPMz8J8oWxh
+      - dwfYRz6EK4FE9iNcR
+      - QEbiEZHHkAaEDEo3q
+      - zAoBH7r4FvddSqPJc
+      - T3s4h67DrihbRNpQS
+      - PhWBYRyqGv7hpZbKm
+    archivedAt: 2022-08-08T16:02:06.348Z
+  - name: demo
+    factorIds:
+      - LCPL67GcDLnC7kpX4
+      - dwfYRz6EK4FE9iNcR
+      - QEbiEZHHkAaEDEo3q
+      - zAoBH7r4FvddSqPJc
+      - 5G2PioQghwMMQaiDA
+      - PhWBYRyqGv7hpZbKm
+factorTypes:
+  - _id: Foqhn4Y7BGbeJWWNH
+    name: playerCount
+    description: The Number of players participating in the given game.
+    required: true
+    type: Integer
+    min: 1
+  - _id: BBRoq5WHnzs4qpWew
+    name: repetitionsWithPartner
+    description: how many times do you repeat with a partner
+    required: false
+    type: String
+  - _id: yZ9EAzrPfAEKk96kr
+    name: teamColor
+    description: are you red or blue?
+    required: false
+    type: String
+  - _id: kJddTH8X4Y6Df7SPA
+    name: selectionDuration
+    description: >-
+      how many seconds do participants have to complete a tangram selection
+      trial
+    required: true
+    type: String
+  - _id: 2DXSSGGZYk9nTsqfw
+    name: targetSet
+    description: which set of tangrams do you see?
+    required: false
+    type: String
+  - _id: oTmtc6KmQb77CaDTC
+    name: submitCode
+    description: code for submission to prolific/mturk
+    required: false
+    type: String
+factors:
+  - _id: LCPL67GcDLnC7kpX4
+    name: duo
+    value: 2
+    factorTypeId: Foqhn4Y7BGbeJWWNH
+  - _id: 9mWDEEbPMz8J8oWxh
+    name: quad
+    value: 4
+    factorTypeId: Foqhn4Y7BGbeJWWNH
+    archivedAt: 2022-08-08T16:01:45.811Z
+  - _id: dwfYRz6EK4FE9iNcR
+    name: four
+    value: '4'
+    factorTypeId: BBRoq5WHnzs4qpWew
+  - _id: LYqRqNsuy3tZGcu7x
+    name: red
+    value: red
+    factorTypeId: yZ9EAzrPfAEKk96kr
+  - _id: QEbiEZHHkAaEDEo3q
+    name: blue
+    value: blue
+    factorTypeId: yZ9EAzrPfAEKk96kr
+  - _id: H6mfXThg4jQ2annbb
+    name: minute
+    value: '60'
+    factorTypeId: kJddTH8X4Y6Df7SPA
+    archivedAt: 2021-01-20T09:52:09.889Z
+  - _id: sLBbCyDZv74ZsrtYE
+    name: solo
+    value: 1
+    factorTypeId: Foqhn4Y7BGbeJWWNH
+    archivedAt: 2021-01-20T10:14:45.046Z
+  - _id: GSmgoGszjTjH6mWNu
+    name: targetSet
+    value: setA
+    factorTypeId: kJddTH8X4Y6Df7SPA
+    archivedAt: 2021-01-18T21:25:42.882Z
+  - _id: 5G2PioQghwMMQaiDA
+    name: setA
+    value: setA
+    factorTypeId: 2DXSSGGZYk9nTsqfw
+  - _id: T3s4h67DrihbRNpQS
+    name: setB
+    value: setB
+    factorTypeId: 2DXSSGGZYk9nTsqfw
+  - _id: PhWBYRyqGv7hpZbKm
+    name: prolificPilot
+    value: 3B021164
+    factorTypeId: oTmtc6KmQb77CaDTC
+  - _id: zAoBH7r4FvddSqPJc
+    name: '45'
+    value: '45'
+    factorTypeId: kJddTH8X4Y6Df7SPA
+lobbyConfigs:
+  - name: lobby
+    timeoutType: lobby
+    timeoutInSeconds: 300
+    timeoutStrategy: fail
+    gameLobbyIds: []
+    archivedAt: 2021-01-20T10:15:45.633Z
+  - name: individual_lobby
+    timeoutType: individual
+    timeoutInSeconds: 300
+    timeoutStrategy: fail
+    extendCount: 2
+    gameLobbyIds: []
