@@ -11,7 +11,7 @@ Empirica.onGameStart((game) => {
   const players = game.players;
   console.debug("game ", game._id, " started");
 
-  const teamColor = game.treatment.teamColor;
+  const teamColor = 'red';
   const schedule = game.get('schedule');
   const roleList = game.get('roleList');
   const targets = game.get('context');
