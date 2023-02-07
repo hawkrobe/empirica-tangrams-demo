@@ -21,10 +21,12 @@ export default class Tangram extends React.Component {
   };
   
   render() {
-    const { tangram, tangram_num, round, stage, player, target, ...rest } = this.props;
+    const { tangram, tangram_num, round, stage, player, game, target, ...rest } = this.props;
     const room = player.get('roomId')
-    const row = 1 + Math.floor(tangram_num / 2)
-    const column = 1 + tangram_num % 2
+    const contextSize = game.get('contextSize')
+
+    const row = 1 + Math.floor(tangram_num / 4)
+    const column = 1 + tangram_num % 4
     const mystyle = {
       "background" : "url(" + tangram + ")",
       "backgroundSize": "cover",
