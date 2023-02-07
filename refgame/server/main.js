@@ -72,11 +72,12 @@ Empirica.gameInit((game, treatment) => {
   game.set("teamColor", treatment.teamColor);
 
   // Sample whether to use tangram set A or set B
-  game.set("targetSet", treatment.targetSet);
+  game.set("contextSize", treatment.contextSize);
   game.set("team", game.players.length > 1);
-  game.set('context', targetSets[treatment.targetSet]);
+  game.set('context', _.sampleSize(targetSets['full'], treatment.contextSize))
+  console.log(treatment.contextSize);
   const targets = game.get('context');
-  const reps = treatment.repetitionsWithPartner;
+  const reps = treatment.numRepetitionsWithPartner;
   const numTargets = targets.length;
   const numPartners = game.players.length - 1;
   const info = {
@@ -84,10 +85,6 @@ Empirica.gameInit((game, treatment) => {
     numRepsPerPartner : reps,
     numTrialsPerPartner: reps * numTargets
   };
-
-
-
-
 
   // I use this to play the sound on the UI when the game starts
   game.set("justStarted", true);
