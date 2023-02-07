@@ -1,17 +1,19 @@
 import Empirica from "meteor/empirica:core";
 
 export const targetSets = {
-  'setA': [
+  'full': [
     "/experiment/tangram_A.png",
     "/experiment/tangram_B.png",
     "/experiment/tangram_C.png",
-    "/experiment/tangram_D.png"
-  ],
-  'setB': [
+    "/experiment/tangram_D.png",
     "/experiment/tangram_E.png",
     "/experiment/tangram_F.png",
     "/experiment/tangram_G.png",
-    "/experiment/tangram_H.png"
+    "/experiment/tangram_H.png",
+    "/experiment/tangram_I.png",
+    "/experiment/tangram_J.png",
+    "/experiment/tangram_K.png",
+    "/experiment/tangram_L.png"
   ]
 };
 
