@@ -19,10 +19,14 @@ function addToRoles(roles, player, role, info) {
   var otherRoleBlock = _.times(info.numTrialsPerBlock, _.constant(otherRole))  ;
   var newValue1 = _.fromPairs([[
     player.toString(),
-    roles[player].concat(..._.flatten(_.times(
-      info.numRepsPerPartner/2,
-      _.constant([roleBlock, otherRoleBlock])
-    )))
+    roles[player].concat(
+      ..._.flatten(_.times(
+        info.numRepsPerPartner/2,
+        _.constant([roleBlock, otherRoleBlock])
+      ))
+    ).concat(
+      ..._.flatten(info.numRepsPerPartner % 2 == 1 ? [roleBlock] : [])
+    )
   ]]);
   _.extend(roles, newValue1);
 }
@@ -75,7 +79,7 @@ Empirica.gameInit((game, treatment) => {
   game.set("contextSize", treatment.contextSize);
   game.set("team", game.players.length > 1);
   game.set('context', _.sampleSize(targetSets['full'], treatment.contextSize))
-  console.log(treatment.contextSize);
+
   const targets = game.get('context');
   const reps = treatment.numRepetitionsWithPartner;
   const numTargets = targets.length;
@@ -109,7 +113,7 @@ Empirica.gameInit((game, treatment) => {
         const roomTargets = _.map(roomBlock, room => room[targetNum]);
         round.set('target', _.zipObject(roomIds, roomTargets));
         round.set('numTrials', reps * numTargets);
-        round.set('trialNum', repNum * reps + targetNum);
+        round.set('trialNum', repNum * numTargets + targetNum);
         round.set('numPartners', numPartners);
         round.set('partnerNum', partnerNum);
         round.set('repNum', repNum);
