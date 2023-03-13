@@ -46,15 +46,15 @@ export default class Task extends React.Component {
     return (
       <div className="task">
         <div className="board">
-          <h1 className="roleIndicator"> You are the {player.get('role')}.</h1>
+          <div className="header" style={{display:'flex'}}>
+            <h1 className="roleIndicator" style={{'float': 'left', 'margin-left': '50px'}}> You are the {player.get('role')}.</h1>
+            <h3 className="feedbackIndicator" style={{'float': 'left', 'margin-left': '50px', 'margin-top': 'auto', 'margin-bottom': 'auto'}}><>{feedback}</></h3>
+          </div>
           <div className="all-tangrams">
             <div className="tangrams">
               {tangramsToRender}
             </div>
           </div>
-          <h3 className="feedbackIndicator">
-            {feedback}
-          </h3>
         </div>
       </div>
     );
