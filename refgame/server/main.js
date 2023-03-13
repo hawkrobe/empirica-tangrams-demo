@@ -72,12 +72,10 @@ Empirica.gameInit((game, treatment) => {
     _.map(game.players, "id")
   );
 
-  // Sample whether on the blue team or red team
+  // Set treatment variables for client-side access
   game.set("teamColor", treatment.teamColor);
-
-  // Sample whether to use tangram set A or set B
+  game.set("showNegativeFeedback", treatment.showNegativeFeedback);
   game.set("contextSize", treatment.contextSize);
-  game.set("team", game.players.length > 1);
   game.set('context', _.sampleSize(targetSets['full'], treatment.contextSize))
 
   const targets = game.get('context');

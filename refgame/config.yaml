@@ -1,20 +1,14 @@
 treatments:
-  - name: easy
-    factorIds:
-      - LCPL67GcDLnC7kpX4
-      - zAoBH7r4FvddSqPJc
-      - PhWBYRyqGv7hpZbKm
-      - 87LioersRD2W7zkNd
-      - P6EqZwPGGp8aPhN3g
-  - name: hard
+  - name: hard_noFeedback
     factorIds:
       - LCPL67GcDLnC7kpX4
       - zAoBH7r4FvddSqPJc
       - PhWBYRyqGv7hpZbKm
       - 87LioersRD2W7zkNd
       - pb9pfqeJBqCHrRX2X
+      - KkEgf4EFFKNNk9Pbe
 factorTypes:
-  - _id: 2vxLofFCFWC8kL5jg
+  - _id: qvL8y4mSRvgiFqoC8
     name: playerCount
     description: The Number of players participating in the given game.
     required: true
@@ -46,11 +40,27 @@ factorTypes:
     type: Integer
     min: 2
     max: 12
+  - _id: ECiwfo8x4o9xrCopQ
+    name: showNegativeFeedback
+    description: >-
+      If `true`, will show the listener the correct target (and show the speaker
+      the listener's selection) when they make an error. If `false` only binary
+      feedback will be shown.
+    required: true
+    type: Boolean
 factors:
+  - _id: meEAFnxMm952XrPmY
+    name: 'true'
+    value: true
+    factorTypeId: ECiwfo8x4o9xrCopQ
+  - _id: KkEgf4EFFKNNk9Pbe
+    name: 'false'
+    value: false
+    factorTypeId: ECiwfo8x4o9xrCopQ
   - _id: LCPL67GcDLnC7kpX4
     name: duo
     value: 2
-    factorTypeId: 2vxLofFCFWC8kL5jg
+    factorTypeId: qvL8y4mSRvgiFqoC8
   - _id: PhWBYRyqGv7hpZbKm
     name: prolificPilot
     value: 3B021164

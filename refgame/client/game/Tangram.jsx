@@ -37,20 +37,35 @@ export default class Tangram extends React.Component {
     };
 
     // Highlight target object for speaker at selection stage
-    // Show it to both players at feedback stage.
-    if((target == tangram & player.get('role') == 'speaker') ||
-       (target == tangram & player.get('clicked') != '')) {
-      _.extend(mystyle, {
-        "outline" :  "10px solid #000",
-        "zIndex" : "9"
-      })
+    // Show it to both players at feedback stage if 'showNegativeFeedback' enabled.
+    if(tangram == target) {
+      if(player.get('role') == 'speaker' ||
+         (game.get('showNegativeFeedback') && player.get('clicked') != '')) {
+        _.extend(mystyle, {
+          "outline" : "10px solid #000",
+          "zIndex" : "9"
+        })
+      }
+      if(player.get('role') == 'speaker' &&
+         !game.get('showNegativeFeedback') &&
+         player.get('clicked') != '') {
+        _.extend(mystyle, {
+          "outline" : "10px solid red",
+          "zIndex" : "9"
+        })
+      }
     }
 
-    // Highlight clicked object in green if correct; red if incorrect
+    // Highlight clicked object in green if correct;
+    // If 'showNegativeFeedback' enabled, also show red if incorrect
     if(tangram == player.get('clicked')) {
-      const color = tangram == target ? 'green' : 'red';
+      const color = (
+        tangram == target ? '10px solid green' : (
+          player.get('role') == 'listener' || game.get('showNegativeFeedback')
+        ) ? '10px solid red' : 'none'
+      );
       _.extend(mystyle, {
-        "outline" :  `10px solid ${color}`,
+        "outline" :  color,
         "zIndex" : "9"
       })
     }
