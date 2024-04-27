@@ -1,0 +1,31 @@
+factors:
+    - name: playerCount
+      desc: playerCount determines the number of Players are in a Game.
+      values:
+        - value: 1
+        - value: 2
+        - value: 3
+        - value: 5
+        - value: 8
+        - value: 13
+    - name: showNegativeFeedback
+      values:
+        - value: 1
+        - value: 0
+    - name: contextSize
+      values:
+        - value: 12
+    - name: numRepetitionsWithPartner
+      values:
+        - value: 6
+    - name: selectionDuration
+      values:
+        - value: 60
+treatments:
+    - name: demo
+      factors:
+        contextSize: 12
+        numRepetitionsWithPartner: 6
+        playerCount: 2
+        selectionDuration: 60
+        showNegativeFeedback: 1

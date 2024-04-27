@@ -1,0 +1,9 @@
+name = "refgameV2"
+
+[tajriba.auth]
+srtoken = "qbZHMNXAbXTduJxq"
+
+[[tajriba.auth.users]]
+name = "Admin"
+username = "admin"
+password = "XJpfqUuo"
