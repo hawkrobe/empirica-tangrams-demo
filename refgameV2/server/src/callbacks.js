@@ -78,12 +78,14 @@ Empirica.onGameStart(({ game }) => {
 
     // Loop through targets in block
     _.times(numTargets, targetNum => {
-      const round = game.addRound();
       const target = block[targetNum]
-      round.set('target', target)
-      round.set('numTrials', reps * numTargets);
-      round.set('trialNum', repNum * numTargets + targetNum);
-      round.set('repNum', repNum);
+      const round = game.addRound({
+        target: target,
+        numTrials: reps * numTargets,
+        trialNum: repNum * numTargets + targetNum,
+        repNum: repNum
+      });
+
       round.addStage({
         name: "selection",
         duration: treatment.selectionDuration
@@ -94,7 +96,6 @@ Empirica.onGameStart(({ game }) => {
 
 Empirica.onRoundStart(({ round }) => {
   const players = round.currentGame.players;
-  //round.currentGame.set("chat", []);
 
   players.forEach((player, i) => {
     player.set('clicked', false);

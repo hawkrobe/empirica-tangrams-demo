@@ -5,7 +5,6 @@ import { useGame } from "@empirica/core/player/classic/react";
 
 export function Tangram(props){
   const handleClick = e => {
-    console.log('click2')
     const { tangram, tangram_num, stage, player, players, round } = props;
     const partnerID = player.get('partner');
     const partner = players.filter((p) => p.id == partnerID)[0];
